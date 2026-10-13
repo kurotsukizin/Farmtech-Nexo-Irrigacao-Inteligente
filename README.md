@@ -244,7 +244,7 @@ Motivo: solo seco, NPK adequado e pH correto.
 Link da simulação:
 
 ```text
-[https://wokwi.com/projects/477776864934983681]
+https://wokwi.com/projects/477776864934983681
 ```
 
 ---
@@ -279,7 +279,7 @@ O vídeo de demonstração possui até cinco minutos e apresenta:
 Link do vídeo não listado:
 
 ```text
-[COLE_AQUI_O_LINK_DO_YOUTUBE]
+
 ```
 
 ---
@@ -288,7 +288,7 @@ Link do vídeo não listado:
 
 | Nome | RM |
 |---|---|
-| Guilherme Cabral Mendes Mariano | [574221] |
+| Guilherme Cabral Mendes Mariano | 574221 |
 
 ---
 
