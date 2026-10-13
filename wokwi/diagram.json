@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "author": "FarmTech Solutions",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 24.04, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -114.9,
+      "left": 157.8,
+      "attrs": { "temperature": "25.6", "humidity": "75" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -92.8,
+      "left": -152.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_n",
+      "top": 121.4,
+      "left": -153.6,
+      "attrs": { "color": "green", "xray": "1", "bounce": "1", "key": "d" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_p",
+      "top": 73.4,
+      "left": -153.6,
+      "attrs": { "color": "green", "xray": "1", "bounce": "1", "key": "s" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_k",
+      "top": 25.4,
+      "left": -153.6,
+      "attrs": { "color": "green", "xray": "1", "bounce": "1", "key": "a" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 211.4, "left": -134.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "dht1:SDA", "esp:4", "green", [ "v0" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "h0" ] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [ "h0" ] ],
+    [ "ldr1:AO", "esp:34", "green", [ "h0" ] ],
+    [ "btn_n:1.r", "esp:14", "green", [ "v0" ] ],
+    [ "btn_n:2.r", "esp:GND.1", "black", [ "h0" ] ],
+    [ "btn_p:1.r", "esp:27", "green", [ "v0" ] ],
+    [ "btn_p:2.r", "esp:GND.1", "black", [ "h0" ] ],
+    [ "btn_k:1.r", "esp:26", "green", [ "v0" ] ],
+    [ "btn_k:2.r", "esp:GND.1", "black", [ "h0" ] ],
+    [ "relay1:VCC", "esp:5V", "red", [ "h0" ] ],
+    [ "relay1:GND", "esp:GND.1", "black", [ "h0" ] ],
+    [ "relay1:IN", "esp:25", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
